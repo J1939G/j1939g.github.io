@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+    color: #cccccc; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+  
+
+@font-face {
+    font-family: Aurore;
+    src: url('fonts/LaBelleAurore-Regular.ttf');
+}
+
+@font-face {
+    font-family: Crimson;
+    src: url('fonts/CrimsonText-Italic.ttf');
+}
+
+#wrapper {
+    width: 90vw;
+    max-width: 45em;
+    margin: 0 auto; 
+    margin-bottom: 100vh;
+}
+
+#wrapper .quote {
+    margin-top: 3em;
+    position: relative;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+#wrapper .content {
+    text-align: center;
+    flex-basis: 100%; 
+}
+
+#wrapper .text {
+    font-weight: 100; 
+    font-family: Crimson;
+    font-size: 2rem; 
+    line-height: 1.5em;
+    margin: 0; 
+}
+
+
+#wrapper .source::after {
+    content: ' ― ';
+}
+
+#wrapper .quote:hover .source {
+    opacity: 1; 
+}
+
+#wrapper .note {
+    margin: 0;
+    margin-top: 1.5rem;
+    line-height: 3rem;
+}
+
+#wrapper .source {
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+#wrapper .author {
+    font-family: Aurore;
+    font-size: 2.6rem;
+    margin-left: 0.5rem; 
+    margin-right: -2rem;
+}
