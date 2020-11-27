@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
 }
 
 #wrapper {
-    width: 90vw;
+    width: 95vw;
     max-width: 45em;
     margin: 0 auto; 
     margin-bottom: 100vh;
@@ -40,7 +40,8 @@ body::-webkit-scrollbar {
 
 #wrapper .content {
     text-align: center;
-    flex-basis: 100%; 
+    flex-basis: 90%; 
+    align-self: center;
 }
 
 #wrapper .text {
@@ -75,5 +76,5 @@ body::-webkit-scrollbar {
     font-family: Aurore;
     font-size: 2.6rem;
     margin-left: 0.5rem; 
-    margin-right: -2rem;
+    margin-right: 0;
 }
