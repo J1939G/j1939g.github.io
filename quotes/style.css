@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
 }
 
 #wrapper {
-    width: 95vw;
+    width: 98vw;
     max-width: 45em;
     margin: 0 auto; 
     margin-bottom: 100vh;
@@ -38,12 +38,6 @@ body::-webkit-scrollbar {
     flex-wrap: wrap;
 }
 
-#wrapper .content {
-    text-align: center;
-    flex-basis: 90%; 
-    align-self: center;
-}
-
 #wrapper .text {
     font-weight: 100; 
     font-family: Crimson;
@@ -52,24 +46,17 @@ body::-webkit-scrollbar {
     margin: 0; 
 }
 
-
-#wrapper .source::after {
-    content: ' ― ';
-}
-
-#wrapper .quote:hover .source {
-    opacity: 1; 
-}
-
 #wrapper .note {
     margin: 0;
     margin-top: 1.5rem;
     line-height: 3rem;
+    transition: all 0.5s ease-in-out;
 }
 
-#wrapper .source {
-    opacity: 0; 
-    transition: opacity 0.5s ease-in-out;
+#wrapper .content {
+    text-align: center;
+    flex-basis: 90%; 
+    margin: 0 auto;
 }
 
 #wrapper .author {
@@ -77,4 +64,22 @@ body::-webkit-scrollbar {
     font-size: 2.6rem;
     margin-left: 0.5rem; 
     margin-right: 0;
+    z-index: 10; 
 }
+
+#wrapper .source {
+    opacity: 0; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+}
+
+#wrapper .quote .author:hover ~ .source {
+    opacity: 1; 
+}
+
+#wrapper .quote .dissappear:hover {
+    opacity: 0;
+}
+

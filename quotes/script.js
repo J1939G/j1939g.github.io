@@ -73,9 +73,9 @@ for (const quote in parsedQuotes) {
     container.className = 'quote';
     // append chilren nodes with line breaks
     addLineBreaks(container, 'content text', currQuote.content);
+    container.appendChild(genElement('p', currQuote.src ? 'dissappear author note' : 'author note', currQuote.author));
     if (currQuote.src)
         container.appendChild(genElement('h2', 'source text note', currQuote.src, true));
-    container.appendChild(genElement('p', 'author note', currQuote.author));
     // append to container and add container to wrapper
     document.getElementById("wrapper").appendChild(container);
 }
